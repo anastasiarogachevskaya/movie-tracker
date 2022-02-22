@@ -6,7 +6,7 @@ const getMovieByTitle = async (title: string) => {
       params: {info: 'mini_info', limit: '10', page: '1', sort: 'year.decr'},
       headers: {
         'x-rapidapi-host': 'data-imdb1.p.rapidapi.com',
-        'x-rapidapi-key': 'dfe8d5477fmshf815155c33eb389p142a3bjsnc523d556d532'
+        'x-rapidapi-key': process.env.RAPID_API_KEY,
       }
     });
     console.log(data)
